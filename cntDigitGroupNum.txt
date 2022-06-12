@@ -1,0 +1,55 @@
+class Solution
+{
+    private static int rec(int ind, int lsum, String str, int dp[][], int n)
+    {
+        
+        if(ind==n)
+        {
+            return 1;
+        }
+        
+        
+        if(dp[ind][lsum]!=-1) return dp[ind][lsum];
+        
+        int count = 0;
+        
+        int sum = 0;
+        
+        for(int i=ind; i<n; i++)
+        {
+            sum += str.charAt(i)-'0';
+            
+            if(sum>=lsum)
+            {
+                count += rec(i+1, sum, str, dp, n);
+            }
+            
+        }
+        
+        return dp[ind][lsum] = count;
+        
+    }
+    
+    public int TotalCount(String str)
+    {
+        // Code here
+        int n = str.length();
+        
+        /*
+        
+        Here we take the dp of size n * n * 9 because the maximum possible sum 
+        for a given string will be n * 9 for length n and we have n starting points.
+        
+        */
+        int dp[][] = new int [n][n*9];
+        
+        for(int i=0; i<n; i++)
+        {
+            Arrays.fill(dp[i], -1);
+        }
+        
+        return rec(0, 0, str, dp, n);
+    }
+    
+    
+}
