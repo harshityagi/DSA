@@ -6,6 +6,7 @@ public class BinarySearchIterative {
 		int[] a= {10,20,30,40};
 		int t=20;
 		System.out.println(binarySearchRec(a, 0, a.length, t));
+		System.out.println(binarySearch(a, t));
 		//System.out.println(binarySearch(a,t));
 	}
 
