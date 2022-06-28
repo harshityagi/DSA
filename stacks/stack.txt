@@ -1,0 +1,14 @@
+Stack Operations:
+
+isEmpty()
+push(x)
+pop()
+peek()
+size()
+
+Underflow: when pop() or peek() called on empty stack.
+Overflow: when push(x) called on a full stack.
+
+Array Implementation of Stack in Java:
+
+
