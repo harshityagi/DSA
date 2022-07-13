@@ -11,7 +11,12 @@ public class helloWorld {
 	    final LocalDateTime now = LocalDateTime.now();
 
 	    System.out.println("Hello, World! The current time is " + dtf.format(now));
-
+	    
+	    int x=5;
+	    int y=7;
+	    
+	    System.out.println("~x =" + ~x);
+	    System.out.println("~x =" + ~y);
 	}
 
 }

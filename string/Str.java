@@ -6,6 +6,13 @@ public class Str {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		String s="Hello";
+		String b="Hello";
+		System.out.println(s==b);
+		b+="Hi";
+		System.out.println(s==b);
+		b="Hello I am amazaing";
+		System.out.println(b.split(" "));
 		
 	}
 	public void strSubstring() {
